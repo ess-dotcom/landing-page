@@ -4,16 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid19 landing page</title>
     <link rel="stylesheet" href="./styles.css" ">
-</head>
 
+</head>
+<script>
+    function toggle() {
+        let toggleNav = document.getElementById("mobile__links ");
+        if (toggleNav.style.display === "block ") {
+            toggleNav.style.display = "none ";
+        } else {
+            toggleNav.style.display = "block ";
+        }
+    }
+</script>
 <body>
-    <nav>
-        <div class="logo ">
-            <a href="# "><img src="./images/Logo.png " alt="Covid-logo "></a>
+    <div class="nav-container ">
+        <div class="navigation ">
+            <div class="logo ">
+                <a href="# "><img src="./images/Logo.png " alt="Covid-logo "></a>
+            </div>
+            <div>
+                <svg class="nav__toggle " onclick="toggle() " xmlns="http://www.w3.org/2000/svg " fill="none " viewBox="0 0 24 24 " stroke="currentColor ">
+                    <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M4 6h16M4 12h16M4 18h16 " />
+                  </svg>
+            </div>
         </div>
+       
         <div class="nav__menu ">
             <a href="# " class="nav-overview ">Overview</a>
             <a href="# " class="nav-contagion ">Contagion</a>
@@ -24,6 +43,14 @@
                 <button class="nav__button "><a href=" ">Contact</a></button>
             </a>
         </div>
+
+    </div>
+    <nav class="nav__mobile " id="mobile__links ">
+            <a href="# " class="nav-item ">Overview</a>
+            <a href="# " class="nav-item ">Contagion</a>
+            <a href="# " class="nav-item ">Symptoms</a>
+            <a href="# " class="nav-item ">Prevention</a>
+            <a href="# " class="nav-item ">Contact</a>
     </nav>
     <div class="overview ">
         <div class="overview__flex ">
